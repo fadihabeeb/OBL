@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/itextpdf-5.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/slf4j-simple-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/emailaddress-rfc2822-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.46.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/simple-java-mail-5.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/slf4j-api-1.7.25.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

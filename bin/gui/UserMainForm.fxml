@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UserMainController">
+  <children>
+      <BorderPane prefHeight="409.0" prefWidth="640.0">
+         <top>
+            <Pane prefHeight="103.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="192.0" layoutX="448.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Hello,">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" layoutX="71.0" layoutY="34.0" text="UsernameHere" textFill="#9e1414">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="448.0" layoutY="77.0" text="Account Status:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblStatus" layoutX="551.0" layoutY="77.0" text="Active" textFill="#16a829">
+                     <padding>
+                        <Insets left="2.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="60.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgLogout" fitHeight="61.0" fitWidth="72.0" layoutX="579.0" onMouseClicked="#imgLogoutClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_exit_to_app_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgNotification" fitHeight="55.0" fitWidth="60.0" layoutX="14.0" layoutY="2.0" onMouseClicked="#imgNotificationClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/NotificationsIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="100.0" minHeight="85.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" percentHeight="0.0" prefHeight="20.0" valignment="TOP" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="imgSearch" fitHeight="99.0" fitWidth="117.0" onMouseClicked="#imgSearchClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Search.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgHistory" fitHeight="93.0" fitWidth="125.0" onMouseClicked="#imgHistoryClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../images/baseline_history_black_48dp.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fx:id="imgSettings" fitHeight="106.0" fitWidth="111.0" onMouseClicked="#imgSettingsClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../images/ic_account_box_48px-512.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgExtendBook" fitHeight="122.0" fitWidth="133.0" onMouseClicked="#imgExtendBookClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../images/ExtendTime.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Book Search" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Activity History" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Account Settings" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Extend Book Lend" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+  </children>
+</VBox>

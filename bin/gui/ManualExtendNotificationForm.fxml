@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="518.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManualExtendNotificationController">
+   <children>
+      <BorderPane prefHeight="517.0" prefWidth="640.0">
+         <top>
+            <Pane prefHeight="74.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgBack" fitHeight="44.0" fitWidth="57.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="255.0" layoutY="22.0" text="Manual Extend Panel">
+                     <font>
+                        <Font name="Bell MT" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="87.0" fitWidth="147.0" layoutX="554.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <GridPane prefHeight="230.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="350.0" minHeight="1.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="350.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="374.0" minHeight="10.0" prefHeight="373.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane prefHeight="25.0" prefWidth="670.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="172.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="229.0" minWidth="0.0" prefWidth="125.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.0" minWidth="10.0" prefWidth="138.4000244140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="531.0" minWidth="10.0" prefWidth="60.99996948242193" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.0" minWidth="10.0" prefWidth="143.00003051757812" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="489.0" minWidth="10.0" prefWidth="68.59992675781245" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                        <RowConstraints maxHeight="25.2" minHeight="25.2" prefHeight="25.2" vgrow="ALWAYS" />
+                     </rowConstraints>
+                  </GridPane>
+                  <Separator prefWidth="200.0" GridPane.rowIndex="1" />
+                  <Label text="Manual Extend Notifications:" textFill="#240fae" underline="true" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <columns>
+                        <TableColumn fx:id="colBookID" prefWidth="155.33334350585938" text="BookID" />
+                        <TableColumn fx:id="colUserID" prefWidth="146.33334350585938" text="UserID" />
+                        <TableColumn fx:id="colWorkerName" prefWidth="172.66668701171875" text="WorkerName" />
+                        <TableColumn fx:id="colExtendDate" prefWidth="122.66668701171875" text="ExtendDate" />
+                        <TableColumn fx:id="colDueDate" prefWidth="101.66668701171875" text="DueDate" />
+                     </columns>
+                  </TableView>
+               </children>
+            </GridPane>
+         </center>
+         <bottom>
+            <GridPane BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</VBox>

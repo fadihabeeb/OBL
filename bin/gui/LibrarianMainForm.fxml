@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LibrarianMainController">
+   <children>
+      <BorderPane prefHeight="409.0" prefWidth="640.0">
+         <top>
+            <Pane prefHeight="103.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="105.0" fitWidth="192.0" layoutX="448.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Hello,">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUsername" layoutX="71.0" layoutY="34.0" text="UsernameHere" textFill="#9e1414">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </top>
+         <bottom>
+            <Pane prefHeight="60.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgLogout" fitHeight="61.0" fitWidth="72.0" layoutX="579.0" onMouseClicked="#imgLogoutClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_exit_to_app_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgNotification" fitHeight="55.0" fitWidth="60.0" layoutX="14.0" layoutY="3.0" onMouseClicked="#imgNotificationClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/NotificationsIcon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="85.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" percentHeight="0.0" prefHeight="20.0" valignment="TOP" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="imgSearch" fitHeight="99.0" fitWidth="117.0" onMouseClicked="#imgSearchClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Search.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgUsersManagement" fitHeight="95.0" fitWidth="101.0" onMouseClicked="#imgUsersManagementClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../images/UsersManagment.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgExtendLend" fitHeight="122.0" fitWidth="133.0" onMouseClicked="#imgExtendLendClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../images/ExtendTime.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Book Search" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Users Managment" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Extend Book Lend" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgLibraryManagement" fitHeight="88.0" fitWidth="125.0" onMouseClicked="#imgLibraryManagementClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                     <image>
+                        <Image url="@../images/LibraryMnagement.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="Library Managment" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Return Book" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Lend Book" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Arial Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imgLendBook" fitHeight="99.0" fitWidth="117.0" onMouseClicked="#imgLendBookClicked" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../images/BookOut.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgReturnBook" fitHeight="99.0" fitWidth="117.0" onMouseClicked="#imgReturnBookClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <image>
+                        <Image url="@../images/BookIn.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>

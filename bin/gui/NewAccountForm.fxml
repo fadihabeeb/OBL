@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="370.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewAccountController">
+   <children>
+      <BorderPane minWidth="-Infinity" prefHeight="370.0" prefWidth="600.0">
+         <bottom>
+            <GridPane prefHeight="54.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="331.0" minWidth="10.0" prefWidth="309.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="225.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btnCreateAccount" mnemonicParsing="false" onAction="#btnCreateAccountPressed" text="Create Account">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnClear" mnemonicParsing="false" onAction="#btnClearPressed" text="Clear" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+         </bottom>
+         <top>
+            <Pane prefHeight="61.0" prefWidth="534.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="216.0" layoutY="4.0" prefHeight="53.0" prefWidth="169.0" text="New Account">
+                     <font>
+                        <Font name="Bell MT Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="462.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBack" fitHeight="44.0" fitWidth="57.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="190.0" prefWidth="302.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="116.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="360.0" minWidth="10.0" prefWidth="208.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID:" GridPane.rowIndex="1" />
+                  <Label text="Mobile Number:" GridPane.rowIndex="4" />
+                  <Label text="Email Address:" GridPane.rowIndex="5" />
+                  <TextField fx:id="txtID" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="User ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="txtFirstName" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="User First Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="txtLastName" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="User Last Name" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="txtMobileNum" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="User mobile number" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="txtEmail" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="User Email Address" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label text="First Name:" GridPane.rowIndex="2" />
+                  <Label text="Last Name:" GridPane.rowIndex="3" />
+                  <Label text="User ID:" />
+                  <Label fx:id="lblUserID" text="----" textFill="#da1212" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </left>
+         <right>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="184.0" prefWidth="298.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="119.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="179.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="67.0" minHeight="23.0" prefHeight="43.0" valignment="BOTTOM" />
+                <RowConstraints maxHeight="107.0" minHeight="7.0" prefHeight="31.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="27.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="89.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Username:">
+                     <padding>
+                        <Insets bottom="2.0" />
+                     </padding></Label>
+                  <Label text="Password:" GridPane.rowIndex="1" />
+                  <Label text="Confirm Password:" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="170.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtConPassword" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtPassword" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <BorderPane.margin>
+                  <Insets top="30.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </right>
+         <center>
+            <Separator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="239.0" prefWidth="2.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="35.0" top="30.0" />
+               </padding>
+            </Separator>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>

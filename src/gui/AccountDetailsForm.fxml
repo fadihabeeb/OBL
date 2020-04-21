@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AccountDetailsController">
+   <children>
+      <BorderPane prefHeight="441.0" prefWidth="489.0">
+         <top>
+            <Pane prefHeight="61.0" prefWidth="534.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="124.0" layoutY="4.0" prefHeight="53.0" prefWidth="197.0" text="Account Details">
+                     <font>
+                        <Font name="Bell MT Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="307.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBack" fitHeight="44.0" fitWidth="57.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="444.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab text="General Details">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="370.0">
+                           <children>
+                              <GridPane prefHeight="230.0" prefWidth="437.0" AnchorPane.topAnchor="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="260.0" minWidth="10.0" prefWidth="116.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="360.0" minWidth="10.0" prefWidth="208.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="-Infinity" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="ID:" GridPane.rowIndex="1" />
+                                    <Label text="Mobile Number:" GridPane.rowIndex="4" />
+                                    <Label text="Email Address:" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtUserID" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="User ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField fx:id="txtFirstName" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="User First Name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField fx:id="txtLastName" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="User Last Name" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField fx:id="txtMobileNum" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="User mobile number" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                    <TextField fx:id="txtEmail" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="User Email Address" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </TextField>
+                                    <Label text="First Name:" GridPane.rowIndex="2" />
+                                    <Label text="Last Name:" GridPane.rowIndex="3" />
+                                    <Label text="User ID:" />
+                                    <Label fx:id="lblUserID" prefHeight="19.0" prefWidth="80.0" text="----" textFill="#da1212" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Status:" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="80.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="lblStatus" text="Active" textFill="#14b22b" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Bell MT Bold" size="15.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="125.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <Button fx:id="btnApplyChanges" mnemonicParsing="false" onAction="#btnApplyChangesPressed" text="Apply Changes" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <GridPane.margin>
+                                          <Insets left="75.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Login Details">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="431.0">
+                           <children>
+                              <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="313.0" prefWidth="434.0" AnchorPane.topAnchor="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="119.0" />
+                                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" valignment="CENTER" />
+                                    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Username:" GridPane.columnIndex="2">
+                                       <padding>
+                                          <Insets bottom="8.0" />
+                                       </padding>
+                                    </Label>
+                                    <Label text="Password:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label text="Confirm Password:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtUsername" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="New Login Username" GridPane.columnIndex="3" />
+                                    <Button fx:id="btnUpdateLogin" mnemonicParsing="false" onAction="#btnUpdateLoginPressed" text="Update Login Details" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets right="40.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <PasswordField fx:id="txtPassword" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="New password(Leave empty to not update password)" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <PasswordField fx:id="txtVerPassword" maxWidth="-Infinity" prefWidth="300.0" promptText="Verify password(Leave empty to not update password)" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TabPane>
+         </left>
+      </BorderPane>
+   </children>
+</VBox>

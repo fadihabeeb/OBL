@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UsersManagementController">
+   <children>
+      <BorderPane prefHeight="253.0" prefWidth="600.0">
+         <top>
+            <Pane prefHeight="61.0" prefWidth="534.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="180.0" layoutY="4.0" prefHeight="53.0" prefWidth="241.0" text="Users Management">
+                     <font>
+                        <Font name="Bell MT Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="138.0" layoutX="462.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="imgBack" fitHeight="44.0" fitWidth="57.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <GridPane prefHeight="179.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="2.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="89.0" minHeight="9.0" prefHeight="28.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="imgUserLookup" fitHeight="132.0" fitWidth="130.0" onMouseClicked="#imgUserLookupClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/UserLookup.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <ImageView fx:id="imgCreateAccount" fitHeight="175.0" fitWidth="150.0" onMouseClicked="#imgCreateAccountClicked" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                     <image>
+                        <Image url="@../images/NewUser.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="50.0" top="10.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label text="User Lookup" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="60.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Create new user" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="50.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Arial Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>

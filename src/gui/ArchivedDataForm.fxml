@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox minHeight="-Infinity" prefHeight="456.0" prefWidth="578.0" scaleShape="false" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ArchivedDataController">
+   <children>
+      <BorderPane prefHeight="510.0" prefWidth="578.0">
+         <top>
+            <Pane prefHeight="67.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="185.0" layoutX="393.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="170.0" layoutY="5.0" text="Archived User Data">
+                     <font>
+                        <Font name="Bell MT" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="6.0" layoutY="45.0" text="User Original Data(Read-Only)" textFill="#ee1616" />
+                  <ImageView fx:id="imgBack" fitHeight="44.0" fitWidth="57.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <GridPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="378.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints prefHeight="58.0" valignment="CENTER" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="394.4" minHeight="0.0" prefHeight="0.0" />
+               </rowConstraints>
+               <children>
+                  <Label text="User ID:" />
+                  <Label text="ID" GridPane.rowIndex="1" />
+                  <Label text="Username:" GridPane.rowIndex="2" />
+                  <Label text="Password:" GridPane.rowIndex="3" />
+                  <Label text="First Name:" GridPane.rowIndex="4" />
+                  <Label text="Last Name:" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Mobile Number:" GridPane.rowIndex="6" />
+                  <Label text="Email:" GridPane.rowIndex="7" />
+                  <TextField fx:id="txtUserID" editable="false" focusTraversable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtID" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtUsername" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtPassword" editable="false" focusTraversable="false" prefHeight="26.0" prefWidth="181.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtFirstName" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtLastName" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtMobileNum" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="txtEmail" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </children>
+</VBox>
